@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $products = config('products');
 
-    dd($products);
+    /* dd($products); */
     return view('home', compact('products'));
 })->name('home');

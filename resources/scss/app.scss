@@ -1,7 +1,9 @@
-@use './partials/general';
-@use './partials/typography';
-@use './partials/header';
-@use './partials/main';
-@use './partials/footer';
-
 @import '~bootstrap/scss/bootstrap';
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css);
+@import './partials/variables';
+@import './partials/general';
+@import './partials/typography';
+@import './partials/header';
+@import './partials/main';
+@import './partials/footer';
+

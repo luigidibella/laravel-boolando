@@ -6,32 +6,27 @@
     @foreach ($products as $product)
         <div id="{{ $product['id'] }}" class="card">
             <div class="photo">
-            <img class="photo-2" :src="frontImage" alt="name">
-            <img class="photo-1" :src="backImage" alt="name">
+            <img class="photo-2" src="{{ Vite::asset('resources/img/') . $product['frontImage'] }}" alt="{{ $product['name'] }}">
+            <img class="photo-1" src="{{ Vite::asset('resources/img/') . $product['backImage'] }}" alt="{{ $product['name'] }}">
             <!-- like -->
-            <div class="heart" :class="{'liked': isInFavorites}">
+            <div class="heart" class="{'liked': isInFavorites}">
                 <i class="fa-solid fa-heart"></i>
             </div>
             <!-- /like -->
             <!-- sconto e eco -->
             <div class="details">
-                <h4
-                v-for="(badge, index) in badges"
-                :key="index"
-                :class="badge.type"
-                >
-                {{badge.value}}</h4
-                >
-
+                @foreach ($product['badges'] as $badge )
+                <h4 class="{{ $badge['type'] }}">{{ $badge['value'] }}</h4>
+                @endforeach
             </div>
             <!-- /sconto e eco -->
             </div>
 
             <div class="info">
-            <h3>{{ brand }}</h3>
-            <h2>{{ name.toUpperCase() }}</h2>
-            <strong class="sale">{{ price }}&euro;&nbsp;</strong> <!-- creare funzione che restituisca "price / 100 * product.badge.value" -->
-            <span class="price">{{ price }}&euro;</span>
+            <h3>{{ $product['brand'] }}</h3>
+            <h2>{{ $product['name'] }}</h2>
+            <strong class="sale">{{ $product['price'] }}&euro;&nbsp;</strong> <!-- creare funzione che restituisca "price / 100 * product.badge.value" -->
+            <span class="price">{{ $product['price'] }}&euro;</span>
             </div>
 
         </div>
