@@ -1,0 +1,46 @@
+@use './variables' as *;
+
+footer{
+    background-color: $bg-footer;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 110px;
+      color: $primary;
+
+      .title{
+        font-weight: bold;
+      }
+
+      .social{
+        .title{
+          font-size: 12px;
+        }
+      }
+
+      ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li{
+          padding: 5px 10px 5px 0;
+          a{
+            color: $primary;
+            text-decoration: none;
+            font-size: 12px;
+            &:hover{
+              color: $bg-header;
+              text-decoration: underline;
+            }
+            i{
+              font-size: 20px;
+            }
+            i:hover{
+              color: $bg-header;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+header{
+    background-color: $bg-header;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li{
+          padding: 5px;
+          a{
+            color: $primary;
+            text-decoration: none;
+            &:hover{
+              text-decoration: underline;
+              color: $secondary;
+            }
+            i:hover{
+              color: $secondary;
+            }
+          }
+        }
+      }
+      .logo{
+        width: 140px;
+        height: 30px;
+        margin: 20px;
+      }
+    }
+  }
