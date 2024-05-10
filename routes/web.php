@@ -19,3 +19,15 @@ Route::get('/', function () {
     /* dd($products); */
     return view('home', compact('products'));
 })->name('home');
+
+Route::get('donna', function () {
+    return view('donna');
+})->name('donna');
+
+Route::get('uomo', function () {
+    return view('uomo');
+})->name('uomo');
+
+Route::get('bambini', function () {
+    return view('bambini');
+})->name('bambini');
