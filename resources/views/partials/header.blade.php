@@ -11,7 +11,8 @@
         <ul>
         @foreach ($main as $item)
             <li>
-                <a href="{{ $item['href'] }}">{{ $item['text'] }}</a>
+                {{-- <a href="{{ url($item['href']) }}">{{ $item['text'] }}</a> --}}
+                <a href="{{ route($item['name']) }}">{{ $item['text'] }}</a>
             </li>
         @endforeach
           <!-- <li><a href="#">Donna</a></li>

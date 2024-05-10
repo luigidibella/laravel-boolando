@@ -2,15 +2,26 @@
 
 return [
     [
+        'text' => "Home",
+        'href' => "/",
+        'name' => "home",
+    ],
+    [
         'text' => "Donna",
-        'href' => "donna"
+        'href' => "donna",
+        'name' => "donna",
+
     ],
     [
         'text' => "Uomo",
-        'href' => "uomo"
+        'href' => "uomo",
+        'name' => "uomo",
+
     ],
     [
         'text' => "Bambini",
-        'href' => "bambini"
+        'href' => "bambini",
+        'name' => "bambini",
+
     ],
 ];
